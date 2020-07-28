@@ -24,7 +24,7 @@
             "location": "[resourceGroup().location]",
             "tags": {
                 "[concat('hidden-related:', '/subscriptions/', subscription().subscriptionId,'/resourcegroups/', resourceGroup().name, '/providers/Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]": "empty",
-                "hidden:createdFromDevOpsStarter": "true",
+                "hidden-createdFromDevOpsStarter": "true",
                 "env" : "testing"
             },
             "resources": [
