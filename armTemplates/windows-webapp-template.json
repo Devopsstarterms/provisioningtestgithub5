@@ -69,6 +69,10 @@
             "name": "[parameters('hostingPlanName')]",
             "apiVersion": "2015-08-01",
             "location": "[resourceGroup().location]",
+            "tags": { 
+                "hidden:createdFromDevOpsStarter": "true",
+                "env" : "testing"
+            },
             "properties": {
                 "name": "[parameters('hostingPlanName')]",
                 "workerSizeId": "0",
