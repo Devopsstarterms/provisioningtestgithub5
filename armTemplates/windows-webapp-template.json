@@ -23,7 +23,9 @@
             "apiVersion": "2016-08-01",
             "location": "[resourceGroup().location]",
             "tags": {
-                "[concat('hidden-related:', '/subscriptions/', subscription().subscriptionId,'/resourcegroups/', resourceGroup().name, '/providers/Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]": "empty"
+                "[concat('hidden-related:', '/subscriptions/', subscription().subscriptionId,'/resourcegroups/', resourceGroup().name, '/providers/Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]": "empty",
+                "hidden:createdFromDevOpsStarter": "true",
+                "env" : "testing"
             },
             "resources": [
                 {
@@ -69,10 +71,6 @@
             "name": "[parameters('hostingPlanName')]",
             "apiVersion": "2015-08-01",
             "location": "[resourceGroup().location]",
-            "tags": { 
-                "hidden:createdFromDevOpsStarter": "true",
-                "env" : "testing"
-            },
             "properties": {
                 "name": "[parameters('hostingPlanName')]",
                 "workerSizeId": "0",
